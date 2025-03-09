@@ -29,7 +29,6 @@ function submitForm(e) {
         timestamp: new Date()
     })
     .then((docRef) => {
-        console.log("Document geschreven met ID: ", docRef.id);
         alert("Bedankt voor je bericht! Document ID: " + docRef.id);
         document.getElementById('contact-form').reset();
         
