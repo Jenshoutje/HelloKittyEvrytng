@@ -7,13 +7,16 @@
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #1a1a1a;
+            background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/84a2f643-437d-43e3-84a1-9b3a5885d3e2/d8l7z4p-5a58f581-087f-43a6-8089-51285d1c352c.png/v1/fill/w_1024,h_1449,q_80,strp/gothic_hello_kitty_by_japoshi_d8l7z4p-fullview.jpg?token=eyJ0eR1OiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTQ0OSIsInBhdGgiOiJcL2ZcLzg0YTJmNjQzLTQzN2QtNDNlMy04NGExLTliM2E1ODg1ZDNlMVwvZDhsN3o0cC01YTU4ZjU4MS0wODdmLTQzYTYtODA4OS01MTI4NWQxYzM1MmMucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.3-JvJtE5h4Lq9b6pY95m4N5F8qO29qCw29wD8jDXRHg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             color: #ffffff;
             text-align: center;
             padding: 20px;
         }
         .container {
-            background-color: #2e2e2e;
+            background-color: rgba(0, 0, 0, 0.7);
             border: 2px solid #ff00ff;
             border-radius: 10px;
             padding: 20px;
@@ -36,7 +39,7 @@
             margin: 10px 0;
             width: 100%;
             box-sizing: border-box;
-            background-color: #4a4a4a;
+            background-color: rgba(50, 50, 50, 0.8);
             color: #ffffff;
             border: 1px solid #ff00ff;
         }
@@ -49,7 +52,18 @@
         .hello-kitty {
             width: 100px;
             height: auto;
-            filter: brightness(0) invert(1);
+            margin: 10px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery img {
+            width: 150px;
+            height: auto;
+            margin: 10px;
+            border: 2px solid #ff00ff;
         }
     </style>
 </head>
@@ -62,6 +76,12 @@
             <input type="text" id="contact" name="contact" placeholder="Jouw nummer of social media" required>
             <input type="submit" value="Verzenden">
         </form>
+        <div class="gallery">
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/84a2f643-437d-43e3-84a1-9b3a5885d3e2/d8l7z4p-5a58f581-087f-43a6-8089-51285d1c352c.png/v1/fill/w_1024,h_1449,q_80,strp/gothic_hello_kitty_by_japoshi_d8l7z4p-fullview.jpg?token=eyJ0eR1OiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTQ0OSIsInBhdGgiOiJcL2ZcLzg0YTJmNjQzLTQzN2QtNDNlMy04NGExLTliM2E1ODg1ZDNlMVwvZDhsN3o0cC01YTU4ZjU4MS0wODdmLTQzYTYtODA4OS01MTI4NWQxYzM1MmMucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.3-JvJtE5h4Lq9b6pY95m4N5F8qO29qCw29wD8jDXRHg" alt="Gothic Hello Kitty">
+            <img src="https://i.pinimg.com/originals/11/9a/22/119a2223e37d1c9e2f593a8b8e30e764.jpg" alt="Gothic Hello Kitty">
+            <img src="https://i.pinimg.com/originals/0f/7e/74/0f7e743a24c56f52b7103e6e0a3e7a2e.jpg" alt="Gothic Hello Kitty">
+            <img src="https://i.pinimg.com/originals/55/84/03/55840390f8505a15875542733d938e6d.jpg" alt="Gothic Hello Kitty">
+        </div>
     </div>
 </body>
 </html>
