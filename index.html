@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hellokittyeverything</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Firebase App (de core Firebase SDK) is altijd vereist en moet als eerste worden geladen -->
+
+    <!-- Koppel je eigen JavaScript-bestand -->
+    <script src="scripts.js" defer></script>
 </head>
 <body>
     <div class="floating-container">
         <h1>Melisa</h1>
         <p>So im kinda very interested in u and woudnt be okay if we'd stop talking.</p>
-        <form action="jens.houthuijsen@student.nhlstenden.com" method="post">
-            <input type="text" id="contact" name="contact" placeholder="fill in ur number or any contact info pls/" required>
+        <form id="contact-form">
+            <input type="text" id="contact" name="contact" placeholder="fill in ur number or any contact info pls" required>
             <input type="submit" value="Verzenden">
         </form>
+        <div id="document-id-display"></div>
     </div>
 </body>
 </html>
