@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speciaal voor jou</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            background-color: #2e2e2e;
+            border: 2px solid #ff00ff;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #ff00ff;
+            font-family: 'Times New Roman', serif;
+            font-size: 2.5em;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input[type="text"], input[type="submit"] {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #4a4a4a;
+            color: #ffffff;
+            border: 1px solid #ff00ff;
+        }
+        input[type="submit"] {
+            background-color: #ff00ff;
+            color: #000000;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .hello-kitty {
+            width: 100px;
+            height: auto;
+            filter: brightness(0) invert(1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Hello_Kitty_2019.svg/1200px-Hello_Kitty_2019.svg.png" alt="Hello Kitty" class="hello-kitty">
+        <h1>Speciaal voor jou</h1>
+        <p>Hoi [Naam], ik vond het leuk om je te ontmoeten en ik zou graag meer met je willen praten. Laat hier je nummer of social media achter, zodat we contact kunnen houden!</p>
+        <form action="jouw-email@example.com" method="post">
+            <input type="text" id="contact" name="contact" placeholder="Jouw nummer of social media" required>
+            <input type="submit" value="Verzenden">
+        </form>
+    </div>
+</body>
+</html>
