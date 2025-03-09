@@ -8,7 +8,9 @@ const firebaseConfig = {
   measurementId: "G-078FVL26HV"
 };
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+}
 
 // Verwijzing naar je Firestore-database
 const db = firebase.firestore();
@@ -28,8 +30,11 @@ function submitForm(e) {
     })
     .then((docRef) => {
         console.log("Document geschreven met ID: ", docRef.id);
-        alert("Bedankt voor je bericht!");
+        alert("Bedankt voor je bericht! Document ID: " + docRef.id);
         document.getElementById('contact-form').reset();
+        
+        // ID weergeven in een specifiek element
+        document.getElementById('document-id-display').textContent = "Document ID: " + docRef.id;
     })
     .catch((error) => {
         console.error("Fout bij het toevoegen van document: ", error);
