@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Speciaal voor jou</title>
+    <title>Per chance</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/84a2f643-437d-43e3-84a1-9b3a5885d3e2/d8l7z4p-5a58f581-087f-43a6-8089-51285d1c352c.png/v1/fill/w_1024,h_1449,q_80,strp/gothic_hello_kitty_by_japoshi_d8l7z4p-fullview.jpg?token=eyJ0eR1OiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTQ0OSIsInBhdGgiOiJcL2ZcLzg0YTJmNjQzLTQzN2QtNDNlMy04NGExLTliM2E1ODg1ZDNlMVwvZDhsN3o0cC01YTU4ZjU4MS0wODdmLTQzYTYtODA4OS01MTI4NWQxYzM1MmMucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.3-JvJtE5h4Lq9b6pY95m4N5F8qO29qCw29wD8jDXRHg');
+            background-image: (edgtkitty.png);
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
             color: #ffffff;
             text-align: center;
-            padding: 20px;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
         }
         .container {
             background-color: rgba(0, 0, 0, 0.7);
@@ -21,7 +27,10 @@
             border-radius: 10px;
             padding: 20px;
             max-width: 600px;
+            width: 100%;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
         h1 {
             color: #ff00ff;
@@ -49,39 +58,48 @@
             font-weight: bold;
             cursor: pointer;
         }
-        .hello-kitty {
-            width: 100px;
-            height: auto;
-            margin: 10px;
-        }
         .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 10px;
+            width: 100%;
+            margin-top: 20px;
         }
         .gallery img {
-            width: 150px;
+            width: 100%;
             height: auto;
-            margin: 10px;
             border: 2px solid #ff00ff;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 0;
         }
     </style>
 </head>
 <body>
+    <div class="overlay"></div>
     <div class="container">
-        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Hello_Kitty_2019.svg/1200px-Hello_Kitty_2019.svg.png" alt="Hello Kitty" class="hello-kitty">
         <h1>Speciaal voor jou</h1>
         <p>Hoi [Naam], ik vond het leuk om je te ontmoeten en ik zou graag meer met je willen praten. Laat hier je nummer of social media achter, zodat we contact kunnen houden!</p>
         <form action="jouw-email@example.com" method="post">
             <input type="text" id="contact" name="contact" placeholder="Jouw nummer of social media" required>
             <input type="submit" value="Verzenden">
         </form>
-        <div class="gallery">
-            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/84a2f643-437d-43e3-84a1-9b3a5885d3e2/d8l7z4p-5a58f581-087f-43a6-8089-51285d1c352c.png/v1/fill/w_1024,h_1449,q_80,strp/gothic_hello_kitty_by_japoshi_d8l7z4p-fullview.jpg?token=eyJ0eR1OiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTQ0OSIsInBhdGgiOiJcL2ZcLzg0YTJmNjQzLTQzN2QtNDNlMy04NGExLTliM2E1ODg1ZDNlMVwvZDhsN3o0cC01YTU4ZjU4MS0wODdmLTQzYTYtODA4OS01MTI4NWQxYzM1MmMucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.3-JvJtE5h4Lq9b6pY95m4N5F8qO29qCw29wD8jDXRHg" alt="Gothic Hello Kitty">
-            <img src="https://i.pinimg.com/originals/11/9a/22/119a2223e37d1c9e2f593a8b8e30e764.jpg" alt="Gothic Hello Kitty">
-            <img src="https://i.pinimg.com/originals/0f/7e/74/0f7e743a24c56f52b7103e6e0a3e7a2e.jpg" alt="Gothic Hello Kitty">
-            <img src="https://i.pinimg.com/originals/55/84/03/55840390f8505a15875542733d938e6d.jpg" alt="Gothic Hello Kitty">
-        </div>
+    </div>
+    <div class="gallery">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/84a2f643-437d-43e3-84a1-9b3a5885d3e2/d8l7z4p-5a58f581-087f-43a6-8089-51285d1c352c.png/v1/fill/w_1024,h_1449,q_80,strp/gothic_hello_kitty_by_japoshi_d8l7z4p-fullview.jpg?token=eyJ0eR1OiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTQ0OSIsInBhdGgiOiJcL2ZcLzg0YTJmNjQzLTQzN2QtNDNlMy04NGExLTliM2E1ODg1ZDNlMVwvZDhsN3o0cC01YTU4ZjU4MS0wODdmLTQzYTYtODA4OS01MTI4NWQxYzM1MmMucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.3-JvJtE5h4Lq9b6pY95m4N5F8qO29qCw29wD8jDXRHg" alt="Gothic Hello Kitty">
+        <img src="https://i.pinimg.com/originals/11/9a/22/119a2223e37d1c9e2f593a8b8e30e764.jpg" alt="Gothic Hello Kitty">
+        <img src="https://i.pinimg.com/originals/0f/7e/74/0f7e743a24c56f52b7103e6e0a3e7a2e.jpg" alt="Gothic Hello Kitty">
+        <img src="https://i.pinimg.com/originals/55/84/03/55840390f8505a15875542733d938e6d.jpg" alt="Gothic Hello Kitty">
+        <img src="https://i.pinimg.com/originals/11/9a/22/119a2223e37d1c9e2f593a8b8e30e764.jpg" alt="Gothic Hello Kitty">
+        <img src="https://i.pinimg.com/originals/0f/7e/74/0f7e743a24c56f52b7103e6e0a3e7a2e.jpg" alt="Gothic Hello Kitty">
+        <img src="https://i.pinimg.com/originals/55/84/03/55840390f8505a15875542733d938e6d.jpg" alt="Gothic Hello Kitty">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/84a2f643-437d-43e3-84a1-9b3a5885d3e2/d8l7z4p-5a58f581-087f-43a6-8089-51285d1c352c.png/v1/fill/w_1024,h_1449,q_80,strp/gothic_hello_kitty_by_japoshi_d8l7z4p-fullview.jpg?token=eyJ0eR1OiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTQ0OSIsInBhdGgiOiJcL2ZcLzg0YTJmNjQzLTQzN2QtNDNlMy04NGExLTliM2E1ODg1ZDNlMVwvZDhsN3o0cC01YTU4ZjU4MS0wODdmLTQzYTYtODA4OS01MTI4NWQxYzM1MmMucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.3-JvJtE5h4Lq9b6pY95m4N5F8qO29qCw29wD8jDXRHg" alt="Gothic Hello Kitty">
     </div>
 </body>
 </html>
