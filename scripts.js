@@ -10,13 +10,10 @@ const firebaseConfig = {
   appId: "1:1087936453818:web:9ec4f6c8b8cbcc503ff683",
   measurementId: "G-078FVL26HV"
 };
-// Initialize Firebase
-if (!firebase.apps.length) {
-    firebase.initializeApp(firebaseConfig);
-}
 
-// Verwijzing naar je Firestore-database
-const db = firebase.firestore();
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
 document.getElementById('contact-form').addEventListener('submit', submitForm);
 
@@ -27,9 +24,9 @@ function submitForm(e) {
     var contactInfo = document.getElementById('contact').value;
 
     // Voeg de gegevens toe aan Firestore
-    db.collection("MelisaResponse").add({
+    addDoc(collection(db, "MelisaResponse"), {
         contact: contactInfo,
-        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        timestamp: new Date()
     })
     .then((docRef) => {
         console.log("Document geschreven met ID: ", docRef.id);
