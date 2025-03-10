@@ -33,7 +33,8 @@ function submitForm(e) {
         document.getElementById('contact-form').reset();
         
         // ID weergeven in een specifiek element
-       
+               document.getElementById('document-id-display').textContent = "Document ID: " + docRef.id;
+    })
     .catch((error) => {
         console.error("Fout bij het toevoegen van document: ", error);
         alert("Er is een fout opgetreden. Probeer het later opnieuw.");
